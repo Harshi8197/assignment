@@ -1,0 +1,32 @@
+1)find the average grade for each age 
+group
+
+SELECT age, AVG(grade) AS average_grade
+FROM students
+GROUP BY age;
+
+2)find the ages with average grade is greater than 85
+
+SELECT age, AVG(grade) AS average_grade
+FROM students
+GROUP BY age
+HAVING AVG(grade) > 85;
+
+3)find the maximum grade for students aged 18
+
+SELECT MAX(grade) AS max_grade
+FROM students
+WHERE age = 18;
+
+4)count the number of students in each grade
+
+SELECT grade, COUNT(*) AS num_students
+FROM students
+GROUP BY grade;
+
+5)find the minimum age among students with grade less than 18
+
+SELECT MIN(age) AS min_age
+FROM students
+WHERE grade < 18;
+
